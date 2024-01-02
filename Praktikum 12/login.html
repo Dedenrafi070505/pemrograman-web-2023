@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page deden rafi akbar</title>
+</head>
+<body>
+  <h2>Login</h2>
+    <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <input type="button" value="Login" onclick="cekLogin()">
+  </form>
+  <script>
+const validUsername = "Deden rafi akbar";
+const validPassword = "07mei2005";
+
+function cekLogin() {
+  const inputUsername = document.getElementById("username").value;
+  const inputPassword = document.getElementById("password").value;
+
+  if (inputUsername === validUsername && inputPassword === validPassword) {
+    alert("Login Sukses");
+    window.location.href = "pesanLogin.html";
+  } else {
+    alert("Login Gagal");
+  }
+}
+
+  </script>
+</body>
+</html>

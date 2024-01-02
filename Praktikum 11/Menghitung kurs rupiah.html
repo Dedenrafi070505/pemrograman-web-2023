@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Rupiah ke Dolar</title>
+</head>
+<body>
+
+    <h1>Konversi Rupiah ke Dolar</h1>
+
+    <label for="rupiah">Masukkan jumlah uang Rupiah:</label>
+    <input type="text" id="rupiah" placeholder="Jumlah Rupiah">
+    <button onclick="konversiRupiahKeDolar()">Hitung</button>
+
+    <p>Nilai dalam Dolar: <span id="hasilDolar"></span></p>
+
+    <script>
+        function konversiRupiahKeDolar() {
+            // Mendapatkan nilai dari input Rupiah
+            let jumlahRupiah = parseFloat(document.getElementById("rupiah").value);
+
+            // Kurs Rupiah ke Dolar (contoh: 1$ = 14.650 Rupiah)
+            let kursRupiahKeDolar = 1 / 14.650;
+
+            // Menghitung nilai dalam Dolar
+            let nilaiDolar = jumlahRupiah * kursRupiahKeDolar;
+
+            // Menampilkan hasil pada elemen dengan id "hasilDolar"
+            let hasilDolarElement = document.getElementById("hasilDolar");
+            hasilDolarElement.innerHTML = nilaiDolar;
+        }
+    </script>
+
+</body>
+</html>
